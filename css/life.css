@@ -1,0 +1,87 @@
+body {
+	background-color: #ECE5CE;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0px;
+}
+
+body, button, input {
+	font-size: 1em;
+	color: #774F38;
+}
+
+#controls {
+	background-color: #C5E0DC;
+	line-height: 2em;
+	padding: 15px;
+	box-shadow: 0px 1px 2px #774F38;
+	margin-bottom: 30px;
+}
+#controls .controlSet {
+	display: inline-block;
+	position: relative;
+	padding: 15px;
+	border: 1px solid #B0C9C5;
+	margin-right: 15px;
+}
+#startGame {
+	display: block;
+	margin: 0px auto 1em auto;
+}
+#controls .icon {
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#controls .icon.disabled {
+	opacity: .5;
+	cursor: default;
+}
+#controls #pause, #controls.isInProgress #play {
+	display: none;
+}
+#controls.isInProgress #pause, #controls #play {
+	display: inline;
+}
+#generationDisplay {
+	display: inline-block;
+	width: 2em;
+	text-align: left;
+	padding-left: 5px;
+}
+.startSetControl {
+	width: 15em;
+}
+#startSet {
+	position: absolute;
+	height: 1.5em;
+	width: 10em;
+	font-family: Courier, monospace;
+	font-size: inherit;
+	vertical-align: top;
+	margin: 3px 0px 0px 5px;
+	z-index: 1;
+}
+#startSet.error {
+	background-color: #FFDDDD;
+}
+
+.gameBoard {
+	position: relative;
+	background-color: #F1D4AF;
+	box-shadow: 1px 1px 2px #774F38;
+	margin: 0px auto 0px auto;
+}
+.cell {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: #E08E79;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: .4s;
+	transition-timing-function: ease;
+}
+.cell.on {
+	opacity: 1;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Life</title>
+	<link type="text/css" rel="stylesheet" href="css/life.css"/>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+	<script type="text/javascript" src="js/Cell.js"></script>
+	<script type="text/javascript" src="js/Life.js"></script>
+	<script type="text/javascript" src="js/LifeModel.js"></script>
+	<script type="text/javascript" src="js/LifeView.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		new Life({
+			el: $(document.body)
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="controls">
+		<span class="controlSet startSetControl">
+			Start set: <textarea name="startSet", id="startSet"></textarea>
+		</span>
+		<span class="controlSet">
+			Board: <input type="text" name="m" class="m" size="3" /> x <input type="text" name="n" class="n" size="3" />
+		</span>
+		<span class="controlSet">
+			Generation: <span id="generationDisplay"></span> <input type="text" name="targetGeneration" class="targetGeneration" size="3" title="Skip to generation" />
+		</span>
+		<span class="controlSet">
+			<img src="images/refresh.png" id="reset" class="icon" title="Reset game" />
+			<img src="images/next.png" id="play" class="icon" title="Play" />
+			<img src="images/pause.png" id="pause" class="icon" title="Pause" />
+		</span>
+	</div>
+</body>
+</html>
