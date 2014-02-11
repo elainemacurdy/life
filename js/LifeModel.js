@@ -308,7 +308,7 @@ LifeModel = Backbone.Model.extend({
 	 */
 	_iterate: function(options) {
 		// break if we've either hit the limit, or if the game has stopped generating new cells
-		if (this.get("switchOnCells") && !this.get("switchOnCells").length) {
+		if ((this.get("switchOnCells") && !this.get("switchOnCells").length) && (this.get("switchOffCells") && !this.get("switchOffCells").length)) {
 			this.stop();
 		} else {
 			this._calculateNextGeneration(options);
